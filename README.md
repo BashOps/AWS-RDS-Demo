@@ -10,6 +10,8 @@ systemctl enable mariadb
 systemctl start mariadb
 apt -y update
 ```
+
+PostgreSQL on EC2:
 ```
 sudo apt install postgresql postgresql-contrib
 sudo systemctl start postgresql.service
