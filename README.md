@@ -1,5 +1,5 @@
 # AWS-RDS-Demo
-
+## Migration of Database from ec2 instance to RDS instance
 
 
 PostgreSQL on EC2:
@@ -27,7 +27,7 @@ INSERT INTO employees(id, first_name, second_name, date_of_birth, salary)
 VALUES(1, 'John', 'son', DATE '2024/10/3', 1000);
 ```
 
-Begin Configurations:
+Begin Configurations for Mariadb:
 ```
 sudo su -
 apt -y install mariadb-server wget
