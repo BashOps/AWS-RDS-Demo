@@ -60,15 +60,15 @@ Adding some dummy data to the Database inside EC2 Instance:
 mysql -u root --password="${DBRootPassword}"
 USE demodb;
 CREATE TABLE table1 (id INT, name VARCHAR(45));
-INSERT INTO table1 VALUES(1, 'Virat'), (2, 'Sachin'), (3, 'Dhoni'), (4, 'ABD');
+INSERT INTO table1 VALUES(1, 'James'), (2, 'Peter'), (3, 'Roy'), (4, 'Veronica');
 SELECT * FROM table1;
 ```
 
 Migration of Database in EC2 Instance to RDS Database:
 ```
-mysqldump -u root -p ec2db > ec2db.sql
-mysql -h <replace-rds-end-point-here> -P 3306 -u rdsuser -p rdsdb < ec2db.sql
-mysql -h <replace-rds-end-point-here> -P 3306 -u rdsuser -p
+mysqldump -u root -p demodb > demodb.sql
+mysql -h <replace-rds-end-point-here> -P 3306 -u admin -p rdsdb < demodb.sql
+mysql -h <replace-rds-end-point-here> -P 3306 -u admin -p
 USE rdsdb
 SELECT * FROM table1;
 ```
